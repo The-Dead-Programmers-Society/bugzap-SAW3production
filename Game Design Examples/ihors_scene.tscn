@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c284ricyvgfyo"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_j6rxk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_16ew0"]
+
+[node name="IhorsScene" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(484, 809)
+script = ExtResource("1_j6rxk")
+
+[node name="Body" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(60.8533, 64.8296)
+texture = SubResource("CanvasTexture_16ew0")
+
+[node name="Gun" type="Sprite2D" parent="CharacterBody2D/Body"]
+modulate = Color(0.639216, 0.411765, 0.403922, 1)
+position = Vector2(-0.0492989, -0.802103)
+scale = Vector2(0.344235, 1)
+texture = SubResource("CanvasTexture_16ew0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+position = Vector2(-490, -759)
+polygon = PackedVector2Array(476, 676, 494, 676, 497, 726, 515, 727, 518, 792, 458, 792, 456, 727, 473, 726)
